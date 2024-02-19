@@ -1,0 +1,35 @@
+{
+  "name": "upload-image-github",
+  "version": "0.1.0",
+  "description": "用github作为图床",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "rollup -w -c",
+    "build:types": "tsc -b ./tsconfig.json",
+    "build": "npm run build:types && rollup -c",
+    "prepublish": "yarn.lock version && pnpm build"
+  },
+  "keywords": [
+    "utils"
+  ],
+  "author": "pangHuLu",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.12.0",
+    "rollup-plugin-cleanup": "^3.2.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3"
+  }
+}
