@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    // 设置相对导入模块的基本目录
+    "baseUrl": ".",
+    // 指定编译后的 JavaScript 代码的目标版本
+    "target": "es5",
+    // 包含编译时需要的库的列表
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // 允许编译器编译 JavaScript 文件
+    "allowJs": true,
+    // 跳过对声明文件的检查
+    "skipLibCheck": true,
+    // 启用对导入命名空间的支持
+    "esModuleInterop": true,
+    // 允许从没有默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+    // 启用所有严格类型检查选项
+    "strict": true,
+    // 强制在文件名中一致使用相同的大小写
+    "forceConsistentCasingInFileNames": true,
+    // 禁止在 switch 语句中的 fall-through
+    "noFallthroughCasesInSwitch": true,
+    // 指定生成模块代码的类型
+    "module": "esnext",
+    // 指定模块解析策略
+    "moduleResolution": "node",
+    // 允许导入 JSON 模块
+    "resolveJsonModule": true,
+    // 将每个文件作为单独的模块进行编译
+    "isolatedModules": true,
+    // 为 for-of 循环生成基于迭代器的代码
+    "downlevelIteration": true,
+    // 是否自动创建类型声明文件
+    "declaration": true,
+    // 类型声明文件的输出目录
+    "declarationDir": "dist/types",
+    // 只生成声明文件，而不会生成 JavaScript 文件
+    "emitDeclarationOnly": true,
+    // 指定 TypeScript 文件的根目录
+    "rootDir": "src",
+    // 模块解析映射，定义了一些别名，方便在代码中使用
+    "paths": {
+      "@/*": ["src/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  },
+  // 指定要包含在编译中的文件或目录
+  "include": ["src"]
+}

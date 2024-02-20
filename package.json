@@ -1,18 +1,18 @@
 {
   "name": "upload-image-github",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "用github作为图床",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
   "types": "./dist/types/index.d.ts",
+  "type": "module",
   "files": [
     "dist"
   ],
   "scripts": {
     "dev": "rollup -w -c",
     "build:types": "tsc -b ./tsconfig.json",
-    "build": "npm run build:types && rollup -c",
-    "prepublish": "yarn.lock version && pnpm build"
+    "build": "npm run build:types && rollup -c"
   },
   "keywords": [
     "utils"
@@ -23,6 +23,7 @@
     "access": "public"
   },
   "dependencies": {
+    "@octokit/core": "^5.1.0",
     "@rollup/plugin-commonjs": "^25.0.7",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
